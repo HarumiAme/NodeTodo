@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path'); // Add this to work with file paths
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.static('public')); // Serve static files
